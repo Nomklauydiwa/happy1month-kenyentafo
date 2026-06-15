@@ -61,3 +61,19 @@ function startHeartAnimation() {
         }, 7000);
     }, 500);
 }
+// Q3 เลือกรูปจากคลัง
+const favoritePhoto = document.getElementById("favoritePhoto");
+const previewImage = document.getElementById("previewImage");
+const photoText = document.getElementById("photoText");
+
+favoritePhoto.addEventListener("change", function () {
+    const file = this.files[0];
+
+    if (file) {
+        previewImage.src = URL.createObjectURL(file);
+        previewImage.style.display = "block";
+
+        photoText.innerHTML =
+            "🥰 รูปที่เธอเลือกน่ารักมากเลย เค้าดีใจที่เธอชอบรูปนี้ 💕";
+    }
+});

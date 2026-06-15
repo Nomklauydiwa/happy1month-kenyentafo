@@ -168,3 +168,51 @@ textarea {
         font-size: 20px;
     }
 }
+/* ===== Puzzle Game ===== */
+
+.puzzle-board {
+    width: 320px;
+    height: 320px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2px;
+    background: rgba(255,255,255,0.4);
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.puzzle-tile {
+    border-radius: 12px;
+    cursor: pointer;
+    background-image: url("images/photo3.jpg.jpg");
+    background-size: 320px 320px;
+    transition: transform 0.2s ease;
+}
+
+.puzzle-tile:hover {
+    transform: scale(0.97);
+}
+
+.empty-tile {
+    background: rgba(255,255,255,0.6);
+}
+
+.puzzle-text {
+    color: #ff6fa5;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+/* มือถือ */
+@media (max-width: 480px) {
+    .puzzle-board {
+        width: 280px;
+        height: 280px;
+    }
+
+    .puzzle-tile {
+        background-size: 280px 280px;
+    }
+}
